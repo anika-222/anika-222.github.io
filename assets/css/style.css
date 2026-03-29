@@ -840,6 +840,16 @@ main {
   background: var(--jet);
 }
 
+.timeline-item:only-child::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -30px;
+  width: 1px;
+  height: 25px;
+  background: var(--jet);
+}
+
 .timeline-item::after {
   content: "";
   position: absolute;
@@ -1520,6 +1530,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-list { margin-left: 65px; }
 
   .timeline-item:not(:last-child)::before { left: -40px; }
+
+  .timeline-item:only-child::before { left: -40px; }
 
   .timeline-item::after {
     height: 8px;
